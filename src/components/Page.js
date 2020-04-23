@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Header from "./Header";
 import Input from "./Input";
 import Output from "./Output";
-import { validate } from "../helpers/text";
+import { tryParseInput } from "../helpers/text";
 
 class Page extends React.Component {
   state = {
@@ -13,7 +13,7 @@ class Page extends React.Component {
 
   onConfirm = (text) => {
     this.setState({ inputText: text });
-    console.log(validate(text));
+    this.setState({ outputText: JSON.stringify(tryParseInput(text)) });
   };
 
   render() {

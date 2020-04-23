@@ -14,5 +14,5 @@ export default ({ value, onChange }) => {
 const TextInput = styled.textarea`
   width: 100%;
   resize: none;
-  height: 80px;
+  height: 180px;
 `;
