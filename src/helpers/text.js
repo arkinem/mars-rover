@@ -2,7 +2,7 @@ const parsePosition = (line) => {
   const splitted = line.split(" ");
 
   return splitted.length >= 2
-    ? { x: splitted[0], y: splitted[1] }
+    ? { x: parseInt(splitted[0]), y: parseInt(splitted[1]) }
     : { x: 0, y: 0 };
 };
 
@@ -36,6 +36,7 @@ export const validate = (text) => {
         if (!roverPositionValidator.test(positionLine)) return false; // invalid position line
 
         const roverPosition = parsePosition(positionLine);
+
         if (roverPosition.x > maxPosition.x || roverPosition.y > maxPosition.y)
           return false; //invalid position values
 
