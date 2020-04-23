@@ -6,7 +6,6 @@ const parsePosition = (line) => {
   return { x: parseInt(x) || 0, y: parseInt(y) || 0, heading };
 };
 
-//validate
 const gridSizeValidator = /^\d+[ X]\d+$/;
 const roverPositionValidator = /^\d+[ X]\d+[ X][NSEW]$/;
 const instructionsValidator = /^[LRM]+$/;
@@ -64,5 +63,3 @@ export const tryParseInput = (text) => {
 
   return result;
 };
-
-//parse
