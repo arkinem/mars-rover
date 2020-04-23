@@ -4,6 +4,7 @@ import Header from "./Header";
 import Input from "./Input";
 import Output from "./Output";
 import { tryParseInput } from "../helpers/text";
+import { calculatePaths } from "../helpers/paths";
 
 class Page extends React.Component {
   state = {
@@ -13,7 +14,25 @@ class Page extends React.Component {
 
   onConfirm = (text) => {
     this.setState({ inputText: text });
-    this.setState({ outputText: JSON.stringify(tryParseInput(text)) });
+    const { plateau, error, rovers } = tryParseInput(text);
+
+    if (error) {
+      this.setState({ outputText: error });
+    } else {
+      if (this.state.outputText) this.setState({ outputText: "" });
+
+      const roversCalculated = calculatePaths(
+        plateau.maxX,
+        plateau.maxY,
+        rovers
+      );
+      let t = "";
+      roversCalculated.forEach(
+        ({ finalPosition }) =>
+          (t += `${finalPosition.x} ${finalPosition.y} ${finalPosition.heading}`)
+      );
+      this.setState({ outputText: t });
+    }
   };
 
   render() {

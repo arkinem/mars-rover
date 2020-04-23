@@ -21,7 +21,7 @@ export const tryParseInput = (text) => {
   if (lines.length > 0) {
     for (let i = 0; i < lines.length - 1; i++) {
       if (i === 0) {
-        //check if grid is not 0x0
+        //TODO check if grid is not 0x0
         if (!gridSizeValidator.test(lines[i])) {
           result.error = messages.error.invalidPlateauSize;
           break;
