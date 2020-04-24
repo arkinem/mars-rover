@@ -56,24 +56,26 @@ class Page extends React.Component {
 
           <MessageBox text={this.state.error} />
           <ConfirmButton label="Calculate" onClick={this.onConfirm} />
-          <TextOutput
-            readOnly={true}
-            value={parseOutput(this.state.rovers, false)}
-          />
-          {this.state.rovers && this.state.plateau && (
-            <TextOutputContainer>
-              <DetailsModalButton
-                label={<GiPathDistance color="white" />}
-                onClick={() => this.setState({ pathsModalOpen: true })}
-              />
-              <PathsModal
-                plateau={this.state.plateau}
-                rovers={this.state.rovers}
-                isOpen={this.state.pathsModalOpen}
-                closeModal={() => this.setState({ pathsModalOpen: false })}
-              />
-            </TextOutputContainer>
-          )}
+          <TextOutputContainer>
+            <TextOutput
+              readOnly={true}
+              value={parseOutput(this.state.rovers, false)}
+            />
+            {this.state.rovers && this.state.plateau && (
+              <>
+                <DetailsModalButton
+                  label={<GiPathDistance color="white" />}
+                  onClick={() => this.setState({ pathsModalOpen: true })}
+                />
+                <PathsModal
+                  plateau={this.state.plateau}
+                  rovers={this.state.rovers}
+                  isOpen={this.state.pathsModalOpen}
+                  closeModal={() => this.setState({ pathsModalOpen: false })}
+                />
+              </>
+            )}
+          </TextOutputContainer>
         </Content>
       </Container>
     );
