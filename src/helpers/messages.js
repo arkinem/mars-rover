@@ -4,8 +4,8 @@ export default {
     invalidRoverPositionLine: "Invalid rover position line",
     initialPositionOutsidePlateau: "Rover initial position is outside plateau",
     invalidInstructionsLine: "Invalid instructions line",
-    roverOutsideEdge: "Rover has fallen from the edge of the plateau",
+    roverOutsideEdge: "Rover ouside edge",
     roverCrash: "Rover has crashed",
-    roverStartPositionOccupied: "Rover start position occupied by other rover",
+    roverStartPositionOccupied: "Rover start position unavailable",
   },
 };

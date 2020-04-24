@@ -111,12 +111,6 @@ export const calculateRoversPaths = (maxPlateauX, maxPlateauY, rovers) => {
               }
             }
 
-            console.log(
-              nextPosition,
-              instructions[i] === roverMoves.moveForward,
-              error
-            );
-
             if (error) break;
           }
         }

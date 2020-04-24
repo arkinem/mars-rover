@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaInfoCircle } from "react-icons/fa";
-import { colors } from "../helpers/style";
+import { colors, shadow } from "../helpers/style";
 
 export default () => (
   <Container>
@@ -68,7 +68,7 @@ const TooltipContainer = styled.div`
   z-index: 90;
   background: ${colors.surface};
   border-radius: 4px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: ${shadow.l};
   display: none;
   ${Container}:hover & {
     display: flex;

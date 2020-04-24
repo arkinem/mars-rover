@@ -5,8 +5,8 @@ import messages from "../helpers/messages";
 
 const size = 300;
 
-const getYGridBorders = (maxX, maxGridY, cellSize) => {
-  return Array.from(Array(maxX + 2).keys()).map((index) => (
+const getYGridBorders = (maxX, maxGridY, cellSize) =>
+  Array.from(Array(maxX + 2).keys()).map((index) => (
     <GridBorder
       key={index}
       x1={index * cellSize}
@@ -15,10 +15,9 @@ const getYGridBorders = (maxX, maxGridY, cellSize) => {
       y2={maxGridY}
     />
   ));
-};
 
-const getXGridBorders = (maxY, maxGridX, cellSize) => {
-  return Array.from(Array(maxY + 2).keys()).map((index) => (
+const getXGridBorders = (maxY, maxGridX, cellSize) =>
+  Array.from(Array(maxY + 2).keys()).map((index) => (
     <GridBorder
       key={index}
       x1={0}
@@ -27,16 +26,15 @@ const getXGridBorders = (maxY, maxGridX, cellSize) => {
       y2={index * cellSize}
     />
   ));
-};
 
 const getRoverPath = (path, cellSize) => {
   return path.map(({ x, y }, index) => (
-    <circle
+    <Circle
       key={index}
       cx={cellSize * x + cellSize / 2}
       cy={size - cellSize * y - cellSize / 2}
       r={cellSize / 3}
-      fill="orange"
+      fill={colors.grid.path}
     />
   ));
 };
@@ -44,13 +42,13 @@ const getRoverPath = (path, cellSize) => {
 const getStartMarker = (position, cellSize) => {
   if (position) {
     const { x, y } = position;
-    console.log(x, y);
+
     return (
-      <circle
+      <Circle
         cx={cellSize * x + cellSize / 2}
         cy={size - cellSize * y - cellSize / 2}
         r={cellSize / 3}
-        fill="red"
+        fill={colors.grid.startPosition}
       />
     );
   }
@@ -62,13 +60,13 @@ const getFinishMarker = (rover, cellSize) => {
     rover.error !== messages.error.roverStartPositionOccupied
   ) {
     const { x, y } = rover.finalPosition;
-    console.log(x, y);
+
     return (
-      <circle
+      <Circle
         cx={cellSize * x + cellSize / 2}
         cy={size - cellSize * y - cellSize / 2}
         r={cellSize / 3}
-        fill="teal"
+        fill={colors.grid.finishPosition}
       />
     );
   }
@@ -80,7 +78,7 @@ const getPreviousRoversMarkers = (roverIndex, rovers, cellSize) => {
 
     for (let i = 0; i < roverIndex; i++) {
       const rover = rovers[i];
-      console.log(rover.error, "error", rovers);
+
       if (
         rover.error !== messages.error.roverStartPositionOccupied &&
         rover.error !== messages.error.roverOutsideEdge
@@ -93,7 +91,7 @@ const getPreviousRoversMarkers = (roverIndex, rovers, cellSize) => {
             cx={cellSize * x + cellSize / 2}
             cy={size - cellSize * y - cellSize / 2}
             r={cellSize / 3}
-            fill="pink"
+            fill={colors.grid.otherRovers}
           />
         );
       }
@@ -135,10 +133,14 @@ export default ({ maxX, maxY, roverIndex, rovers }) => {
 const Svg = styled.svg`
   width: ${size + 1}px;
   height: ${size + 1}px;
-  background: ${colors.surface};
+  background: ${colors.grid.background};
 `;
 
 const GridBorder = styled.line`
-  stroke: white;
+  stroke: ${colors.grid.border};
   stroke-width: 1px;
+`;
+
+const Circle = styled.circle`
+  stroke: none;
 `;

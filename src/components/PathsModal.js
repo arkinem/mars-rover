@@ -1,12 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import Modal from "react-modal";
-import { colors } from "../helpers/style";
+import { colors, shadow } from "../helpers/style";
 import Button from "./Button";
 import Grid from "./Grid";
+import GridLegend from "./GridLegend";
 
-const getRoverLabel = (index, { initialPosition }) =>
-  `#${index} || x:${initialPosition.x} y:${initialPosition.y} heading:${initialPosition.heading}`;
+const getRoverLabel = (index, { initialPosition, error }) => {
+  let result = `#${index} || x:${initialPosition.x} y:${initialPosition.y} heading:${initialPosition.heading}`;
+
+  if (error) result += ` [${error}]`;
+  return result;
+};
 
 class PathsModal extends React.Component {
   state = {
@@ -29,24 +34,24 @@ class PathsModal extends React.Component {
     const maxX = plateau ? plateau.maxX : 0;
     const maxY = plateau ? plateau.maxY : 0;
 
-    console.log(selectedRover);
     return (
       <Modal
         isOpen={isOpen}
         onRequestClose={closeModal}
-        contentLabel="Example Modal"
         style={customModalStyle}
       >
         <Container>
           {rovers && (
-            <select value={selectedIndex} onChange={this.onChange}>
+            <Select value={selectedIndex} onChange={this.onChange}>
               {rovers.map((rover, index) => (
                 <option key={index} value={index}>
                   {getRoverLabel(index, rover)}
                 </option>
               ))}
-            </select>
+            </Select>
           )}
+
+          <GridLegend />
 
           {plateau && selectedRover && (
             <Grid
@@ -56,7 +61,7 @@ class PathsModal extends React.Component {
               rovers={rovers}
             />
           )}
-          <Button label="Close" onClick={closeModal} />
+          <CloseButton label="Close" onClick={closeModal} />
         </Container>
       </Modal>
     );
@@ -71,6 +76,7 @@ const customModalStyle = {
   },
   content: {
     border: "none",
+    borderRadius: 6,
     backgroundColor: colors.surfaceDarker,
     color: "lightsteelblue",
     top: "50%",
@@ -78,15 +84,24 @@ const customModalStyle = {
     right: "auto",
     bottom: "auto",
     transform: "translate(-50%, -50%)",
+    boxShadow: shadow.l,
   },
 };
 
 const Container = styled.div`
   position: relative;
   min-width: 300px;
-  min-height: 400px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+`;
+
+const Select = styled.select`
+  width: 100%;
+`;
+
+const CloseButton = styled(Button)`
+  margin-top: 12px;
 `;
