@@ -7,4 +7,6 @@ export default () => {
 
 const Title = styled.h1`
   padding: 16px;
+  font-size: 32px;
+  letter-spacing: 1px;
 `;

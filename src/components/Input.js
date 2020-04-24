@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import MessageBox from "./MessageBox";
 import { tryParseInput } from "../helpers/input";
-
-//validation from here before button click?
+import Button from "./Button";
+import InputInfoTooltip from "./InputInfoTooltip";
 
 export default class Input extends React.Component {
   state = {
@@ -25,24 +25,39 @@ export default class Input extends React.Component {
   render() {
     return (
       <>
-        <TextInput
-          value={this.state.text}
-          onChange={(event) => this.setState({ text: event.target.value })}
-        />
+        <Label>Insert your input here:</Label>
+        <TextInputContainer>
+          <TextInput
+            value={this.state.text}
+            onChange={(event) => this.setState({ text: event.target.value })}
+          />
+          <InputInfoTooltip />
+        </TextInputContainer>
+
         <MessageBox text={this.state.error} />
-        <ConfirmButton onClick={this.onConfirm}>calculate</ConfirmButton>
+        <ConfirmButton label="calculate" onClick={this.onConfirm} />
       </>
     );
   }
 }
 
+const Label = styled.p`
+  margin-bottom: 12px;
+  font-weight: 300;
+`;
+
+const TextInputContainer = styled.div`
+  position: relative;
+  width: 100%;
+`;
+
 const TextInput = styled.textarea`
   width: 100%;
   resize: none;
-  height: 80px;
+  height: 100px;
 `;
 
-const ConfirmButton = styled.button`
+const ConfirmButton = styled(Button)`
   margin: 12px 0;
 `;
 

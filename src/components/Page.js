@@ -7,6 +7,9 @@ import { parseOutput } from "../helpers/output";
 import { calculateRoversPaths } from "../helpers/paths";
 import Background from "./Background";
 
+import ReactTooltip from "react-tooltip";
+import { colors } from "../helpers/style";
+
 class Page extends React.Component {
   state = {
     rovers: null,
@@ -34,6 +37,7 @@ class Page extends React.Component {
           <Header />
           <Input onSubmit={this.onSubmit} />
           <Output value={parseOutput(rovers, showErrors)} />
+          <ReactTooltip wrapper={<div style={{ maxWidth: 320 }} />} />
         </Content>
       </Container>
     );
@@ -50,7 +54,7 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-  background-color: rgb(51, 51, 51);
+  background-color: ${colors.surfaceDarker};
   padding: 16px;
   border-radius: 6px;
   min-width: 320px;
@@ -58,4 +62,5 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 `;

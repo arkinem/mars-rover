@@ -2,23 +2,28 @@ import { createGlobalStyle } from "styled-components";
 
 export const colors = {
   text: "#ffffff",
-  surface: "#515151",
-  surfaceDarker: "#373738",
+  border: "#515151",
+  surface: "#373738",
+  surfaceDarker: "#333333",
   // background: "#282c34",
   background: "#232741",
   error: "#ff6b6b",
+  button: " #646566",
+  tooltip: " #646566",
 };
+
+export const font = "'Ubuntu', sans-serif";
 
 export const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${colors.background};
     color: ${colors.text};
-    font-family: 'Ubuntu', sans-serif;
+    font-family: ${font};
   }
 
   textarea {
-    background: ${colors.surfaceDarker};
+    background: ${colors.surface};
     color: ${colors.text};
-    border: 1px solid ${colors.surface};
+    border: 1px solid ${colors.border};
   }
 `;
