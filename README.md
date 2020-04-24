@@ -15,7 +15,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Features
 
-![Screenshot1](https://i.ibb.co/b5nch2V/2020-04-24-14-24-05-Mars-Rover.png)
+### Handles collisions and rovers that go outside plateau
+<img src="https://i.ibb.co/6t98g3d/2020-04-24-14-25-24-Mars-Rover.png" alt="screen1" width="300"/>
+
+### Allows to browse journeys  
+<img src="https://i.ibb.co/b5nch2V/2020-04-24-14-24-05-Mars-Rover.png" alt="screen2" width="300"/>
 
 # Problem Statement
 
