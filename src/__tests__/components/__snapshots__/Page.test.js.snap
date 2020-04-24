@@ -36,24 +36,7 @@ exports[`Page renders correctly 1`] = `
       <textarea
         className="sc-fznJRM dvQzZ"
         onChange={[Function]}
-        value="15 15
-1 2 N
-LMLMLMLMM
-3 3 E
-MMRMMRMRRM
-14 14 S
-MMMMRMMMMMMMMMLMMMMRMMMMMMRMMMMMMM
-8 5 N
-LMLMLMLMM
-3 12 N
-MMMMMMMMMMMRMMMMMM
-7 7 N
-LMLMLMLMM
-9 9 N
-MMMMMLMMMLMMMMM
-0 0 E
-MMMMMMMMMMMMMLMMM
-"
+        value=""
       />
       <div
         className="sc-AxhUy eOmVvp"

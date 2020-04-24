@@ -15,7 +15,7 @@ import PathsModal from "./PathsModal/PathsModal";
 class Page extends React.Component {
   state = {
     error: null,
-    inputText: tempText,
+    inputText: "",
     rovers: null,
     plateau: null,
     pathsModalOpen: false,
@@ -142,23 +142,4 @@ const DetailsModalButton = styled(Button)`
   width: 45px;
   height: 45px;
   border-radius: 100%;
-`;
-
-const tempText = `15 15
-1 2 N
-LMLMLMLMM
-3 3 E
-MMRMMRMRRM
-14 14 S
-MMMMRMMMMMMMMMLMMMMRMMMMMMRMMMMMMM
-8 5 N
-LMLMLMLMM
-3 12 N
-MMMMMMMMMMMRMMMMMM
-7 7 N
-LMLMLMLMM
-9 9 N
-MMMMMLMMMLMMMMM
-0 0 E
-MMMMMMMMMMMMMLMMM
 `;
