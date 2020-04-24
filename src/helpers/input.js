@@ -18,7 +18,7 @@ export const tryParseInput = (text) => {
     rovers: [],
   };
 
-  if (lines.length > 0) {
+  if (lines.length > 1) {
     for (let i = 0; i < lines.length - 1; i++) {
       if (i === 0) {
         if (!gridSizeValidator.test(lines[i])) {
@@ -58,6 +58,8 @@ export const tryParseInput = (text) => {
         result.rovers.push({ initialPosition, instructions: instructionsLine });
       }
     }
+  } else {
+    result.error = messages.error.invalidInput;
   }
 
   return result;

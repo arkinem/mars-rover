@@ -1,5 +1,6 @@
 export default {
   error: {
+    invalidInput: "Invalid input",
     invalidPlateauSize: "Invalid plateau size",
     invalidRoverPositionLine: "Invalid rover position line",
     initialPositionOutsidePlateau: "Rover initial position is outside plateau",

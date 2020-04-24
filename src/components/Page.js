@@ -40,6 +40,8 @@ class Page extends React.Component {
   };
 
   render() {
+    const { inputText, rovers, plateau, error } = this.state;
+
     return (
       <Container>
         <Background />
@@ -48,28 +50,25 @@ class Page extends React.Component {
           <Label>Insert your input here:</Label>
           <TextInputContainer>
             <TextInput
-              value={this.state.inputText}
+              value={inputText}
               onChange={(e) => this.setState({ inputText: e.target.value })}
             />
             <InputInfoTooltip />
           </TextInputContainer>
 
-          <MessageBox text={this.state.error} />
+          <MessageBox text={error} />
           <ConfirmButton label="Calculate" onClick={this.onConfirm} />
           <TextOutputContainer>
-            <TextOutput
-              readOnly={true}
-              value={parseOutput(this.state.rovers, false)}
-            />
-            {this.state.rovers && this.state.plateau && (
+            <TextOutput readOnly={true} value={parseOutput(rovers, false)} />
+            {rovers && rovers.length > 0 && plateau && (
               <>
                 <DetailsModalButton
                   label={<GiPathDistance color="white" />}
                   onClick={() => this.setState({ pathsModalOpen: true })}
                 />
                 <PathsModal
-                  plateau={this.state.plateau}
-                  rovers={this.state.rovers}
+                  plateau={plateau}
+                  rovers={rovers}
                   isOpen={this.state.pathsModalOpen}
                   closeModal={() => this.setState({ pathsModalOpen: false })}
                 />
