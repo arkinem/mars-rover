@@ -14,8 +14,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 2. Rover instructions are ignored if initial rover's position is already occupied.
 
 # Features
-![Screenshot1](https://i.ibb.co/6t98g3d/2020-04-24-14-25-24-Mars-Rover.png)
-![Screenshot2](https://i.ibb.co/b5nch2V/2020-04-24-14-24-05-Mars-Rover.png)
+![Screenshot1](https://i.ibb.co/6t98g3d/2020-04-24-14-25-24-Mars-Rover.png | width=100) ![Screenshot2](https://i.ibb.co/b5nch2V/2020-04-24-14-24-05-Mars-Rover.png | width=100)
 
 # Problem Statement
 
