@@ -1,28 +1,62 @@
+# Introduction
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Website
 
-In the project directory, you can run:
+[![Netlify Status](https://api.netlify.com/api/v1/badges/45b1d77d-200d-4f8f-a8cf-7ebef14d18cd/deploy-status)](https://app.netlify.com/sites/mars-rover-page/deploys)
 
-### `yarn start`
+[mars-rover-page.netlify.app](mars-rover-page.netlify.app)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Assumptions
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. After collision, rover stays on the position from previous move.
+2. Rover instructions are ignored if initial rover's position is already occupied.
 
-### `yarn test`
+# Problem Statement
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+MARS ROVERS
 
-### `yarn build`
+A squad of robotic rovers are to be landed by NASA on a plateau on Mars.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This plateau, which is curiously rectangular, must be navigated by the rovers so that their on board cameras can get a complete view of the surrounding terrain to send back to Earth.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+A rover's position is represented by a combination of an x and y co-ordinates and a letter representing one of the four cardinal compass points. The plateau is divided up into a grid to simplify navigation. An example position might be 0, 0, N, which means the rover is in the bottom left corner and facing North.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In order to control a rover, NASA sends a simple string of letters. The possible letters are 'L', 'R' and 'M'. 'L' and 'R' makes the rover spin 90 degrees left or right respectively, without moving from its current spot.
+
+'M' means move forward one grid point, and maintain the same heading.
+
+Assume that the square directly North from (x, y) is (x, y+1).
+
+Input:
+
+The first line of input is the upper-right coordinates of the plateau, the lower-left coordinates are assumed to be 0,0.
+
+The rest of the input is information pertaining to the rovers that have been deployed. Each rover has two lines of input. The first line gives the rover's position, and the second line is a series of instructions telling the rover how to explore the plateau.
+
+The position is made up of two integers and a letter separated by spaces, corresponding to the x and y co-ordinates and the rover's orientation.
+
+Each rover will be finished sequentially, which means that the second rover won't start to move until the first one has finished moving.
+
+Output:
+
+The output for each rover should be its final co-ordinates and heading.
+
+Test Input:
+
+5 5
+
+1 2 N
+
+LMLMLMLMM
+
+3 3 E
+
+MMRMMRMRRM
+
+Expected Output:
+
+1 3 N
+
+5 1 E
