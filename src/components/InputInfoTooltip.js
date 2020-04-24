@@ -48,7 +48,6 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
   transition: all 0.3s;
 `;
 
@@ -69,6 +68,7 @@ const TooltipContainer = styled.div`
   background: ${colors.surface};
   border-radius: 4px;
   box-shadow: ${shadow.l};
+
   display: none;
   ${Container}:hover & {
     display: flex;
@@ -92,6 +92,7 @@ const Link = styled.a`
   overflow-wrap: break-word;
   color: ${colors.text};
   text-decoration: none;
+
   opacity: 0.9;
   :hover {
     opacity: 0.5;

@@ -2,7 +2,7 @@
 
 exports[`InputInfoTooltip renders correctly 1`] = `
 <div
-  className="sc-AxjAm kYLVhV"
+  className="sc-AxjAm hXgkib"
 >
   <svg
     className="sc-AxirZ jzxuBH"
@@ -24,7 +24,7 @@ exports[`InputInfoTooltip renders correctly 1`] = `
     />
   </svg>
   <div
-    className="sc-AxiKw loasdx"
+    className="sc-AxiKw jxkrOj"
   >
     <p
       className="sc-AxhCb ixBvKy"
@@ -68,7 +68,7 @@ exports[`InputInfoTooltip renders correctly 1`] = `
       
 
       <a
-        className="sc-AxgMl gxirvO"
+        className="sc-AxgMl gWEYHI"
         href="https://code.google.com/archive/p/marsrovertechchallenge/"
         target="_blank"
       >
