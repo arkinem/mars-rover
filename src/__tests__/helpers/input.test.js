@@ -1,4 +1,4 @@
-import { tryParseInput } from "../../helpers/text";
+import { tryParseInput } from "../../helpers/input";
 import messages from "../../helpers/messages";
 
 describe("tryParseInput", () => {

@@ -3,45 +3,35 @@ import styled from "styled-components";
 import Header from "./Header";
 import Input from "./Input";
 import Output from "./Output";
-import { tryParseInput } from "../helpers/text";
-import { calculatePaths } from "../helpers/paths";
+import { parseOutput } from "../helpers/output";
+import { calculateRoversPaths } from "../helpers/paths";
 
 class Page extends React.Component {
   state = {
-    inputText: "",
-    outputText: "",
+    rovers: null,
+    plateau: null,
+    showErrors: true,
   };
 
-  onConfirm = (text) => {
-    this.setState({ inputText: text });
-    const { plateau, error, rovers } = tryParseInput(text);
+  onSubmit = (plateau, rovers) => {
+    const roversCalculated = calculateRoversPaths(
+      plateau.maxX,
+      plateau.maxY,
+      rovers
+    );
+    console.log(roversCalculated);
 
-    if (error) {
-      this.setState({ outputText: error });
-    } else {
-      if (this.state.outputText) this.setState({ outputText: "" });
-
-      const roversCalculated = calculatePaths(
-        plateau.maxX,
-        plateau.maxY,
-        rovers
-      );
-      let t = "";
-      roversCalculated.forEach(
-        ({ finalPosition }) =>
-          (t += `${finalPosition.x} ${finalPosition.y} ${finalPosition.heading}`)
-      );
-      this.setState({ outputText: t });
-    }
+    this.setState({ rovers: roversCalculated, plateau });
   };
 
   render() {
+    const { rovers, showErrors } = this.state;
     return (
       <Container>
         <Content>
           <Header />
-          <Input onConfirm={this.onConfirm} />
-          <Output value={this.state.outputText} />
+          <Input onSubmit={this.onSubmit} />
+          <Output value={parseOutput(rovers, showErrors)} />
         </Content>
       </Container>
     );
