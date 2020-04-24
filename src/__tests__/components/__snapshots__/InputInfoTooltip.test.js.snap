@@ -56,10 +56,16 @@ exports[`InputInfoTooltip renders correctly 1`] = `
       5 5
       
 
-      2 N LMLMLMLMM
+      2 1 N
       
 
-      3 3 E MMRMMRMRRM
+      LMLMLMLMM
+      
+
+      3 3 E
+      
+
+      MMRMMRMRRM
     </p>
     <p
       className="sc-AxhCb ixBvKy"

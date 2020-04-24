@@ -23,7 +23,7 @@ export default () => (
         orientation.
       </Paragraph>
       <Paragraph>
-        Example:{"\n"}5 5{"\n"}2 N LMLMLMLMM{"\n"}3 3 E MMRMMRMRRM
+        Example:{"\n"}5 5{"\n"}2 1 N{"\n"}LMLMLMLMM{"\n"}3 3 E{"\n"}MMRMMRMRRM
       </Paragraph>
       <Paragraph>
         If you need more help, look here:{"\n"}
