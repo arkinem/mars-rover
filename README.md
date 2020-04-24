@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/45b1d77d-200d-4f8f-a8cf-7ebef14d18cd/deploy-status)](https://app.netlify.com/sites/mars-rover-page/deploys)
 
-[mars-rover-page.netlify.app](mars-rover-page.netlify.app)
+[mars-rover-page.netlify.app](https://mars-rover-page.netlify.app)
 
 # Assumptions
 
