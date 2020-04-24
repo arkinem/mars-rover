@@ -13,6 +13,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1. After collision, rover stays on the position from previous move.
 2. Rover instructions are ignored if initial rover's position is already occupied.
 
+# Features
+
+![Screenshot1](https://ibb.co/v4805QW)
+
 # Problem Statement
 
 MARS ROVERS
