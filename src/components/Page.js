@@ -6,8 +6,6 @@ import Output from "./Output";
 import { parseOutput } from "../helpers/output";
 import { calculateRoversPaths } from "../helpers/paths";
 import Background from "./Background";
-
-import ReactTooltip from "react-tooltip";
 import { colors } from "../helpers/style";
 
 class Page extends React.Component {
@@ -37,7 +35,6 @@ class Page extends React.Component {
           <Header />
           <Input onSubmit={this.onSubmit} />
           <Output value={parseOutput(rovers, showErrors)} />
-          <ReactTooltip wrapper={<div style={{ maxWidth: 320 }} />} />
         </Content>
       </Container>
     );
