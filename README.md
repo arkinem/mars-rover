@@ -15,7 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Features
 
-![Screenshot1](https://ibb.co/v4805QW)
+![Screenshot1](https://i.ibb.co/b5nch2V/2020-04-24-14-24-05-Mars-Rover.png)
 
 # Problem Statement
 
