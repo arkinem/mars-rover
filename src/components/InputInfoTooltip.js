@@ -40,8 +40,8 @@ export default () => (
 
 const Container = styled.div`
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 5px;
+  right: 5px;
   height: 30px;
   width: 30px;
   cursor: pointer;
@@ -60,9 +60,9 @@ const InfoIcon = styled(FaInfoCircle)`
 
 const TooltipContainer = styled.div`
   position: absolute;
-  max-width: 280px;
-  width: 280px;
-  right: 25px;
+  max-width: 270px;
+  width: 270px;
+  right: 30px;
   top: -40px;
   padding: 12px;
   z-index: 90;

@@ -1,4 +1,4 @@
-export const parseOutput = (rovers, showErrors) => {
+export const parseOutput = (rovers, showErrors = true) => {
   let result = "";
 
   if (rovers && rovers.length > 0) {

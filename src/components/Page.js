@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Header from "./Header";
 import Input from "./Input";
 import Output from "./Output";
-import { parseOutput } from "../helpers/output";
 import { calculateRoversPaths } from "../helpers/paths";
 import Background from "./Background";
 import { colors } from "../helpers/style";
@@ -12,7 +11,6 @@ class Page extends React.Component {
   state = {
     rovers: null,
     plateau: null,
-    showErrors: true,
   };
 
   onSubmit = (plateau, rovers) => {
@@ -27,14 +25,13 @@ class Page extends React.Component {
   };
 
   render() {
-    const { rovers, showErrors } = this.state;
     return (
       <Container>
         <Background />
         <Content>
           <Header />
           <Input onSubmit={this.onSubmit} />
-          <Output value={parseOutput(rovers, showErrors)} />
+          <Output rovers={this.state.rovers} plateau={this.state.plateau} />
         </Content>
       </Container>
     );

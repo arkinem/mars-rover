@@ -2,12 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import { colors, font } from "../helpers/style";
 
-export default ({ label, className }) => {
-  return <Button className={className}>{label}</Button>;
+export default ({ label, className, onClick }) => {
+  return (
+    <Button className={className} onClick={onClick}>
+      {label}
+    </Button>
+  );
 };
 
 const Button = styled.button`
   padding: 12px;
+  width: 100%;
   background: ${colors.button};
   border: none;
   border-radius: 3px;

@@ -2,18 +2,38 @@ import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import { GiPathDistance } from "react-icons/gi";
-export default ({ value, onChange }) => {
-  return (
-    <Container>
-      <TextInput
-        readOnly={true}
-        value={value}
-        onChange={(event) => onChange(event.target.value)}
-      />
-      <ConfirmButton label={<GiPathDistance color="white" />} />
-    </Container>
-  );
-};
+import { parseOutput } from "../helpers/output";
+import PathsModal from "./PathsModal";
+
+class Output extends React.Component {
+  state = { pathsModalOpen: false };
+
+  render() {
+    const { rovers, plateau } = this.props;
+    console.log(plateau);
+    return (
+      <Container>
+        <TextInput readOnly={true} value={parseOutput(rovers, false)} />
+        {rovers && plateau && (
+          <>
+            <ConfirmButton
+              label={<GiPathDistance color="white" />}
+              onClick={() => this.setState({ pathsModalOpen: true })}
+            />
+            <PathsModal
+              plateau={plateau}
+              rovers={rovers}
+              isOpen={this.state.pathsModalOpen}
+              closeModal={() => this.setState({ pathsModalOpen: false })}
+            />
+          </>
+        )}
+      </Container>
+    );
+  }
+}
+
+export default Output;
 
 const Container = styled.div`
   width: 100%;

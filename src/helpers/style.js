@@ -26,4 +26,18 @@ export const GlobalStyle = createGlobalStyle`
     color: ${colors.text};
     border: 1px solid ${colors.border};
   }
+
+  select {
+    padding: 6px;
+    background: ${colors.surface};
+    color: ${colors.text};
+    border: 1px solid ${colors.border};
+     font-family: ${font};
+  }
+
+  option {
+  
+     padding:10px 10px;
+ 
+  }
 `;

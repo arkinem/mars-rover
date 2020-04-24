@@ -4,6 +4,9 @@ import "reset-css";
 import * as serviceWorker from "./serviceWorker";
 import Page from "./components/Page";
 import { GlobalStyle } from "./helpers/style";
+import Modal from "react-modal";
+
+Modal.setAppElement("#root");
 
 ReactDOM.render(
   <React.StrictMode>

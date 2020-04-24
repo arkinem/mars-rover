@@ -99,7 +99,10 @@ export const calculateRoversPaths = (maxPlateauX, maxPlateauY, rovers) => {
             path.push(nextPosition);
 
             if (instructions[i] === roverMoves.moveForward) {
-              if (nextPosition.x > maxPlateauX || nextPosition > maxPlateauY)
+              if (nextPosition.x > maxPlateauX || nextPosition.y > maxPlateauY)
+                error = messages.error.roverOutsideEdge;
+
+              if (nextPosition.x < 0 || nextPosition.y < 0)
                 error = messages.error.roverOutsideEdge;
 
               if (isOccupied(nextPosition, occupied)) {
@@ -107,6 +110,12 @@ export const calculateRoversPaths = (maxPlateauX, maxPlateauY, rovers) => {
                 path.pop();
               }
             }
+
+            console.log(
+              nextPosition,
+              instructions[i] === roverMoves.moveForward,
+              error
+            );
 
             if (error) break;
           }
