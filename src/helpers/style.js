@@ -4,7 +4,8 @@ export const colors = {
   text: "#ffffff",
   surface: "#515151",
   surfaceDarker: "#373738",
-  background: "#282c34",
+  // background: "#282c34",
+  background: "#232741",
   error: "#ff6b6b",
 };
 

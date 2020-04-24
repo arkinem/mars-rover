@@ -5,6 +5,7 @@ import Input from "./Input";
 import Output from "./Output";
 import { parseOutput } from "../helpers/output";
 import { calculateRoversPaths } from "../helpers/paths";
+import Background from "./Background";
 
 class Page extends React.Component {
   state = {
@@ -28,6 +29,7 @@ class Page extends React.Component {
     const { rovers, showErrors } = this.state;
     return (
       <Container>
+        <Background />
         <Content>
           <Header />
           <Input onSubmit={this.onSubmit} />
