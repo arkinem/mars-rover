@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputInfoTooltip renders correctly 1`] = `
+<div
+  className="sc-AxjAm kYLVhV"
+>
+  <svg
+    className="sc-AxirZ jzxuBH"
+    fill="currentColor"
+    height="1em"
+    stroke="currentColor"
+    strokeWidth="0"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+    viewBox="0 0 512 512"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+    />
+  </svg>
+  <div
+    className="sc-AxiKw loasdx"
+  >
+    <p
+      className="sc-AxhCb ixBvKy"
+    >
+      The 
+      <span
+        className="sc-AxhUy bHFpOQ"
+      >
+        first line of input
+      </span>
+       is the upper-right coordinates of the plateau, the lower-left coordinates are assumed to be 0,0.
+    </p>
+    <p
+      className="sc-AxhCb ixBvKy"
+    >
+      The rest of the input is information pertaining to the rovers that have been deployed. Each rover has two lines of input. The first line gives the rover's position, and the second line is a series of instructions telling the rover how to explore the plateau.
+    </p>
+    <p
+      className="sc-AxhCb ixBvKy"
+    >
+      The position is made up of two integers and a letter separated by spaces, corresponding to the x and y co-ordinates and the rover's orientation.
+    </p>
+    <p
+      className="sc-AxhCb ixBvKy"
+    >
+      Example:
+      
+
+      5 5
+      
+
+      2 N LMLMLMLMM
+      
+
+      3 3 E MMRMMRMRRM
+    </p>
+    <p
+      className="sc-AxhCb ixBvKy"
+    >
+      If you need more help, look here:
+      
+
+      <a
+        className="sc-AxgMl gxirvO"
+        href="https://code.google.com/archive/p/marsrovertechchallenge/"
+        target="_blank"
+      >
+        https://code.google.com/archive/p/marsrovertechchallenge/
+      </a>
+    </p>
+  </div>
+</div>
+`;

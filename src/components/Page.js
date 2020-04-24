@@ -10,7 +10,7 @@ import Button from "./Button";
 import InputInfoTooltip from "./InputInfoTooltip";
 import { parseOutput } from "../helpers/output";
 import { GiPathDistance } from "react-icons/gi";
-import PathsModal from "./PathsModal";
+import PathsModal from "./PathsModal/PathsModal";
 
 class Page extends React.Component {
   state = {

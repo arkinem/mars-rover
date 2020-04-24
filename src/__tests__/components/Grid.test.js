@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Page from "../../components/Page";
+import Grid from "../../components/PathsModal/Grid";
 
-describe("Page", () => {
+describe("Grid", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<Page />).toJSON();
+    const tree = renderer.create(<Grid />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

@@ -5,7 +5,6 @@ export const colors = {
   border: "#515151",
   surface: "#373738",
   surfaceDarker: "#333333",
-  // background: "#282c34",
   background: "#232741",
   error: "#ff6b6b",
   button: " #646566",
@@ -48,11 +47,5 @@ export const GlobalStyle = createGlobalStyle`
     color: ${colors.text};
     border: 1px solid ${colors.border};
      font-family: ${font};
-  }
-
-  option {
-  
-     padding:10px 10px;
- 
   }
 `;

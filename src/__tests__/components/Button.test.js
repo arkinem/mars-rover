@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Page from "../../components/Page";
+import Button from "../../components/Button";
 
-describe("Page", () => {
+describe("Button", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<Page />).toJSON();
+    const tree = renderer.create(<Button label="test" />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

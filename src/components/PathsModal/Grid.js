@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { colors } from "../helpers/style";
-import messages from "../helpers/messages";
+import { colors } from "../../helpers/style";
+import messages from "../../helpers/messages";
 
 const size = 300;
 

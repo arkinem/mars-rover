@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Modal from "react-modal";
-import { colors, shadow } from "../helpers/style";
-import Button from "./Button";
+import { colors, shadow } from "../../helpers/style";
+import Button from "../Button";
 import Grid from "./Grid";
 import GridLegend from "./GridLegend";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { colors } from "../helpers/style";
+import { colors } from "../../helpers/style";
 
 export default () => {
   return (

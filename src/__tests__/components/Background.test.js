@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Page from "../../components/Page";
+import Background from "../../components/Background";
 
-describe("Page", () => {
+describe("Background", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<Page />).toJSON();
+    const tree = renderer.create(<Background />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
