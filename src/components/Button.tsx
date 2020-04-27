@@ -1,16 +1,20 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import styled from "styled-components";
-import { colors, font, shadow } from "../helpers/style";
+import { colors, font, shadow } from "../constants/style";
 
-export default ({ label, className, onClick }) => {
-  return (
-    <Button className={className} onClick={onClick}>
-      {label}
-    </Button>
-  );
-};
+type Props = { label: any } & React.HTMLProps<HTMLButtonElement>;
 
-const Button = styled.button`
+export const Button: FunctionComponent<Props> = ({
+  label,
+  onClick,
+  className,
+}) => (
+  <StyledButton className={className} onClick={onClick}>
+    {label}
+  </StyledButton>
+);
+
+const StyledButton = styled.button`
   width: 100%;
   padding: 12px;
   border: none;
