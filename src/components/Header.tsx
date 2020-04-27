@@ -1,8 +1,9 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
+import strings from "../constants/strings";
 
 export const Header: FunctionComponent<{}> = () => (
-  <Heading>Mars Rover</Heading>
+  <Heading>{strings.header.marsRover}</Heading>
 );
 
 const Heading = styled.h1`

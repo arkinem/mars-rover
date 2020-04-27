@@ -11,5 +11,19 @@ export default {
   },
   placeholder: {
     outputWillAppearHere: "Output will appear here",
+    insertYourInputHere: "Insert your input here",
+  },
+  button: {
+    calculate: "Calculate",
+    close: "Close",
+  },
+  legend: {
+    startPosition: "Start Position",
+    endPosition: "End Position",
+    selectedRoverPath: "Selected Rover Path",
+    otherRovers: "Other Rovers",
+  },
+  header: {
+    marsRover: "Mars Rover",
   },
 };

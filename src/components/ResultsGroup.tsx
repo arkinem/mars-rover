@@ -6,7 +6,7 @@ import { GiPathDistance } from "react-icons/gi";
 import ResultsModal from "./ResultsModal/ResultsModal";
 import { Rover } from "../helpers/rover";
 import { Plateau } from "../helpers/plateau";
-import messages from "../constants/messages";
+import strings from "../constants/strings";
 import { colors } from "../constants/style";
 
 type Props = {
@@ -29,7 +29,7 @@ export default class ResultsGroup extends React.Component<Props, State> {
     return (
       <Container>
         <TextOutput
-          placeholder={messages.placeholder.outputWillAppearHere}
+          placeholder={strings.placeholder.outputWillAppearHere}
           readOnly={true}
           value={parseOutput(rovers)}
         />

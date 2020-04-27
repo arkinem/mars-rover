@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { InputTooltip } from "./InputTooltip";
 import { MessageBox } from "./MessageBox";
 import { Button } from "./Button";
+import strings from "../constants/strings";
 
 type Props = {
   error: string | null;
@@ -27,7 +28,7 @@ export default class InputGroup extends React.Component<Props, State> {
       <>
         <TextInputContainer>
           <TextInput
-            placeholder={"Insert your input here"}
+            placeholder={strings.placeholder.insertYourInputHere}
             value={this.state.input}
             onChange={(e) =>
               this.setState({
@@ -39,7 +40,10 @@ export default class InputGroup extends React.Component<Props, State> {
           <InputTooltip />
         </TextInputContainer>
         <MessageBox text={this.props.error} />
-        <ConfirmButton label="Calculate" onClick={this.onConfirm} />
+        <ConfirmButton
+          label={strings.button.calculate}
+          onClick={this.onConfirm}
+        />
       </>
     );
   }

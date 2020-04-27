@@ -1,5 +1,5 @@
 import { tryParseInput, parseOutput } from "../../helpers/io";
-import messages from "../../constants/messages";
+import strings from "../../constants/strings";
 import { RoverLocation, Heading, Rover } from "../../helpers/rover";
 import { createLocation, createRover } from "./testHelpers";
 
@@ -27,43 +27,43 @@ describe("tryParseInput", () => {
   it("returns invalidPlateauSize error for invalid text format", () => {
     const result = tryParseInput(inputInvalidPlateuFormat);
 
-    expect(result.error).toBe(messages.error.invalidPlateauSize);
+    expect(result.error).toBe(strings.error.invalidPlateauSize);
   });
 
   it("returns invalidPlateauSize error for negative values", () => {
     const result = tryParseInput(inputNegativePlateuValue);
 
-    expect(result.error).toBe(messages.error.invalidPlateauSize);
+    expect(result.error).toBe(strings.error.invalidPlateauSize);
   });
 
   it("returns invalidRoverLocationLine error for invalid text formatting", () => {
     const result = tryParseInput(inputInvalidRoverLocationFormat);
 
-    expect(result.error).toBe(messages.error.invalidRoverLocationLine);
+    expect(result.error).toBe(strings.error.invalidRoverLocationLine);
   });
 
   it("returns invalidRoverLocationLine error for negative values", () => {
     const result = tryParseInput(inputNegativeRoverLocationValues);
 
-    expect(result.error).toBe(messages.error.invalidRoverLocationLine);
+    expect(result.error).toBe(strings.error.invalidRoverLocationLine);
   });
 
   it("returns initialLocationOutsidePlateau error for rover location outside plateau", () => {
     const result = tryParseInput(inputRoverLocationOutsidePlateau);
 
-    expect(result.error).toBe(messages.error.initialLocationOutsidePlateau);
+    expect(result.error).toBe(strings.error.initialLocationOutsidePlateau);
   });
 
   it("returns invalidInstructionsLine error for invalid text formatting", () => {
     const result = tryParseInput(inputInvalidInstructionsFormat);
 
-    expect(result.error).toBe(messages.error.invalidInstructionsLine);
+    expect(result.error).toBe(strings.error.invalidInstructionsLine);
   });
 
   it("returns invalidInstructionsLine error for any characters other than LRM", () => {
     const result = tryParseInput(inputInvalidInstructionsCharacters);
 
-    expect(result.error).toBe(messages.error.invalidInstructionsLine);
+    expect(result.error).toBe(strings.error.invalidInstructionsLine);
   });
 });
 

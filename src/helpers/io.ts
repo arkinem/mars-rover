@@ -1,6 +1,6 @@
 import { RoverLocation, Heading, Rover, getFinalLocation } from "./rover";
 import { Plateau } from "./plateau";
-import messages from "../constants/messages";
+import strings from "../constants/strings";
 
 const parsePlateauString = (line: string): Plateau | null => {
   const plateauValidator = /^\d+[ X]\d+$/;
@@ -23,7 +23,7 @@ const parseLocationString = (line: string): RoverLocation | null => {
   return {
     x: parseInt(x),
     y: parseInt(y),
-    heading: <Heading>heading,
+    heading: heading as Heading,
   };
 };
 
@@ -50,14 +50,14 @@ export const tryParseInput = (text: string): ParseResult => {
   };
 
   if (lines.length < 3) {
-    result.error = messages.error.invalidInput;
+    result.error = strings.error.invalidInput;
   } else {
     for (let i = 0; i < lines.length - 1; i++) {
       if (i === 0) {
         const plateau = parsePlateauString(lines[i]);
 
         if (!plateau) {
-          result.error = messages.error.invalidPlateauSize;
+          result.error = strings.error.invalidPlateauSize;
           break;
         }
 
@@ -67,10 +67,10 @@ export const tryParseInput = (text: string): ParseResult => {
         const { maxX, maxY } = result.plateau;
 
         if (!initialLocation) {
-          result.error = messages.error.invalidRoverLocationLine;
+          result.error = strings.error.invalidRoverLocationLine;
           break;
         } else if (initialLocation.x > maxX || initialLocation.y > maxY) {
-          result.error = messages.error.initialLocationOutsidePlateau;
+          result.error = strings.error.initialLocationOutsidePlateau;
           break;
         }
 
@@ -79,7 +79,7 @@ export const tryParseInput = (text: string): ParseResult => {
         const instructions = lines[i];
 
         if (!isInstructionsStringValid(instructions)) {
-          result.error = messages.error.invalidInstructionsLine;
+          result.error = strings.error.invalidInstructionsLine;
           break;
         }
 
