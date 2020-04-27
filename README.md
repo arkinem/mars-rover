@@ -1,9 +1,5 @@
 # Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-# Website
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/45b1d77d-200d-4f8f-a8cf-7ebef14d18cd/deploy-status)](https://app.netlify.com/sites/mars-rover-page/deploys)
 
 [mars-rover-page.netlify.app](https://mars-rover-page.netlify.app)
@@ -15,11 +11,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Features
 
-### Handles collisions and rovers that go outside plateau
-<img src="https://i.ibb.co/6t98g3d/2020-04-24-14-25-24-Mars-Rover.png" alt="screen1" width="300"/>
+### Calculates rover's path
 
-### Allows to browse journeys  
+<img src="https://i.ibb.co/HnNMHwD/2020-04-27-11-51-35-Mars-Rover.png" alt="outside" width="300"/>
+
+### Allows to browse journeys
+
 <img src="https://i.ibb.co/b5nch2V/2020-04-24-14-24-05-Mars-Rover.png" alt="screen2" width="300"/>
+
+Note: Path visualisation is not available for plateau that exceeds 100x100.
+
+### Handles collisions and rovers that go outside plateau
+
+<img src="https://i.ibb.co/D7zYnyb/2020-04-27-11-45-46-Mars-Rover.png" alt="screen3" width="300"/>
 
 # Problem Statement
 

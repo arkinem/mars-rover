@@ -36,6 +36,7 @@ export default class Page extends React.Component<{}, State> {
         this.setState({
           plateau,
           rovers: calculateRoversPaths(rovers, plateau),
+          error: null,
         });
       }
     }

@@ -17,7 +17,7 @@ export const Tooltip: FunctionComponent<Props> = ({ children }: Props) => (
 const Container = styled.div`
   position: absolute;
   top: 5px;
-  right: 5px;
+  right: 10px;
   height: 30px;
   width: 30px;
   cursor: pointer;
@@ -37,17 +37,22 @@ const TooltipContainer = styled.div`
   position: absolute;
   max-width: 270px;
   width: 270px;
-  right: 30px;
+  right: 25px;
   top: -40px;
   padding: 12px;
   z-index: 90;
   background: ${colors.surface};
   border-radius: 4px;
   box-shadow: ${shadow.l};
+  display: flex;
+  flex-direction: column;
 
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   ${Container}:hover & {
-    display: flex;
-    flex-direction: column;
+    visibility: visible;
+    opacity: 1;
   }
+
+  transition: opacity 0.5s;
 `;

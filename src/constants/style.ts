@@ -39,6 +39,15 @@ export const GlobalStyle = createGlobalStyle`
     background: ${colors.surface};
     color: ${colors.text};
     border: 1px solid ${colors.border};
+    overflow: auto;
+    outline: none;
+    resize: none;
+    padding: 12px;
+    width: calc(100% - 26px);
+
+    ::placeholder {
+      font-family: ${font};
+    }
   }
 
   select {

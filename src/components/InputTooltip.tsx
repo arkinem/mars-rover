@@ -20,7 +20,12 @@ export const InputTooltip: FunctionComponent<{}> = () => (
       corresponding to the x and y co-ordinates and the rover's orientation.
     </Paragraph>
     <Paragraph>
-      Example:{"\n"}5 5{"\n"}2 1 N{"\n"}LMLMLMLMM{"\n"}3 3 E{"\n"}MMRMMRMRRM
+      Example:{"\n"}5 5{"\n"}2 1 N{"\n"}LMLMLMLMM{"\n"}3 3 E{"\n"}
+      MMRMMRMRRM
+    </Paragraph>
+    <Paragraph>
+      Note: Path visualisation is not available for plateau that exceeds
+      100x100.
     </Paragraph>
     <Paragraph>
       If you need more help, look here:{"\n"}
