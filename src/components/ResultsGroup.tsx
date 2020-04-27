@@ -68,10 +68,10 @@ const TextOutput = styled.textarea`
 
 const DetailsModalButton = styled(Button)`
   position: absolute;
-  bottom: 15px;
+  bottom: 25px;
   right: 20px;
   padding: 0;
-  padding-top: 10px;
+  padding-top: 8px;
   font-size: 26px;
   width: 45px;
   height: 45px;
