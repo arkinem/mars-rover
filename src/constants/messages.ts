@@ -2,11 +2,11 @@ export default {
   error: {
     invalidInput: "Invalid input",
     invalidPlateauSize: "Invalid plateau size",
-    invalidRoverPositionLine: "Invalid rover position line",
-    initialPositionOutsidePlateau: "Rover initial position is outside plateau",
+    invalidRoverLocationLine: "Invalid rover location line",
+    initialLocationOutsidePlateau: "Rover initial location is outside plateau",
     invalidInstructionsLine: "Invalid instructions line",
     roverOutsideEdge: "Rover ouside edge",
     roverCrash: "Rover has crashed",
-    roverStartPositionOccupied: "Rover start position unavailable",
+    roverStartLocationOccupied: "Rover start location unavailable",
   },
 };

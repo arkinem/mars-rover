@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Grid from "../../components/PathsModal/Grid";
+import Grid from "../../components/ResultsModal/Grid";
 
 describe("Grid", () => {
   it("renders correctly", () => {

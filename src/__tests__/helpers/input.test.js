@@ -1,5 +1,5 @@
 import { tryParseInput } from "../../helpers/input";
-import messages from "../../helpers/messages";
+import messages from "../../constants/messages";
 
 describe("tryParseInput", () => {
   it("returns plateau maximum size for valid data", () => {

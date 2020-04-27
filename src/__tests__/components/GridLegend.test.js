@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import GridLegend from "../../components/PathsModal/GridLegend";
+import GridLegend from "../../components/ResultsModal/GridLegend";
 
 describe("GridLegend", () => {
   it("renders correctly", () => {
