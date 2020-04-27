@@ -1,5 +1,10 @@
 import { RoverLocation, Heading, Rover } from "../../helpers/rover";
 
+export const createPlateau = (minX?: number, minY?: number) => ({
+  minX: minX || 5,
+  minY: minY || 5,
+});
+
 export const createLocation = (
   x: number,
   y: number,
