@@ -9,4 +9,7 @@ export default {
     roverCrash: "Rover has crashed",
     roverStartLocationOccupied: "Rover start location unavailable",
   },
+  placeholder: {
+    outputWillAppearHere: "Output will appear here",
+  },
 };

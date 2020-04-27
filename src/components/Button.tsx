@@ -24,6 +24,7 @@ const StyledButton = styled.button`
   font-family: ${font};
   background: ${colors.button};
   box-shadow: ${shadow.s};
+  outline: none;
 
   :hover {
     box-shadow: ${shadow.m};

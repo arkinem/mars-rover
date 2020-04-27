@@ -25,9 +25,9 @@ export default class InputGroup extends React.Component<Props, State> {
   render() {
     return (
       <>
-        <Label>Insert your input here:</Label>
         <TextInputContainer>
           <TextInput
+            placeholder={"Insert your input here"}
             value={this.state.input}
             onChange={(e) =>
               this.setState({
@@ -45,18 +45,12 @@ export default class InputGroup extends React.Component<Props, State> {
   }
 }
 
-const Label = styled.p`
-  margin-bottom: 12px;
-  font-weight: 300;
-`;
-
 const TextInputContainer = styled.div`
   position: relative;
   width: 100%;
 `;
 
 const TextInput = styled.textarea`
-  width: 100%;
   resize: none;
   height: 150px;
 `;
