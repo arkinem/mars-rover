@@ -1,5 +1,5 @@
 import { Plateau, isLocationAvailable } from "./plateau";
-import messages from "../constants/messages";
+import strings from "../constants/strings";
 
 export enum Heading {
   North = "N",
@@ -102,7 +102,7 @@ const calculatePath = (
     path.push({ ...initialLocation });
 
     if (!isLocationAvailable(initialLocation, occupied)) {
-      error = messages.error.roverStartLocationOccupied;
+      error = strings.error.roverStartLocationOccupied;
     } else {
       for (let i = 0; i < instructions.length; i++) {
         const currentLocation = { ...path[i] };
@@ -112,13 +112,13 @@ const calculatePath = (
 
         if (instructions[i] === Moves.MoveForward) {
           if (nextLocation.x > plateau.maxX || nextLocation.y > plateau.maxY)
-            error = messages.error.roverOutsideEdge;
+            error = strings.error.roverOutsideEdge;
 
           if (nextLocation.x < 0 || nextLocation.y < 0)
-            error = messages.error.roverOutsideEdge;
+            error = strings.error.roverOutsideEdge;
 
           if (!isLocationAvailable(nextLocation, occupied)) {
-            error = messages.error.roverCrash;
+            error = strings.error.roverCrash;
             path.pop();
           }
         }

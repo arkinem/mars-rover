@@ -1,7 +1,7 @@
 import React, { ReactNodeArray, ReactNode, FunctionComponent } from "react";
 import styled from "styled-components";
 import { colors } from "../../constants/style";
-import messages from "../../constants/messages";
+import strings from "../../constants/strings";
 import { RoverLocation, Rover, getFinalLocation } from "../../helpers/rover";
 
 const size = 300;
@@ -71,8 +71,8 @@ const renderStartMarker = (
 
 const renderFinishMarker = (rover: Rover, cellSize: number): ReactNode => {
   if (
-    (rover && rover.error !== messages.error.roverOutsideEdge) ||
-    rover.error !== messages.error.roverStartLocationOccupied
+    (rover && rover.error !== strings.error.roverOutsideEdge) ||
+    rover.error !== strings.error.roverStartLocationOccupied
   ) {
     const { x, y } = getFinalLocation(rover);
 
@@ -99,8 +99,8 @@ const renderPreviousRoversMarkers = (
       const rover = rovers[i];
 
       if (
-        rover.error !== messages.error.roverStartLocationOccupied &&
-        rover.error !== messages.error.roverOutsideEdge
+        rover.error !== strings.error.roverStartLocationOccupied &&
+        rover.error !== strings.error.roverOutsideEdge
       ) {
         const { x, y } = getFinalLocation(rovers[i]);
 
@@ -147,16 +147,16 @@ export const Grid: FunctionComponent<Props> = ({
         {renderXGridBorders(maxY, maxGridX, cellSize)}
 
         {path &&
-          error !== messages.error.roverStartLocationOccupied &&
+          error !== strings.error.roverStartLocationOccupied &&
           renderPath(
             path.filter((p, i) => i !== 0 || i !== path.length - 1),
             cellSize
           )}
 
-        {error !== messages.error.roverStartLocationOccupied &&
+        {error !== strings.error.roverStartLocationOccupied &&
           renderStartMarker(initialLocation, cellSize)}
-        {error !== messages.error.roverStartLocationOccupied &&
-          error !== messages.error.roverOutsideEdge &&
+        {error !== strings.error.roverStartLocationOccupied &&
+          error !== strings.error.roverOutsideEdge &&
           renderFinishMarker(rover, cellSize)}
 
         {renderPreviousRoversMarkers(roverIndex, rovers, cellSize)}

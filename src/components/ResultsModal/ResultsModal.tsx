@@ -7,6 +7,7 @@ import { GridLegend } from "./GridLegend";
 import { Plateau } from "../../helpers/plateau";
 import { Rover } from "../../helpers/rover";
 import { RoverSelect } from "./RoverSelect";
+import strings from "../../constants/strings";
 
 type Props = {
   plateau: Plateau;
@@ -60,7 +61,7 @@ export default class ResultsModal extends React.Component<Props, State> {
             />
           )}
 
-          <CloseButton label="Close" onClick={closeModal} />
+          <CloseButton label={strings.button.close} onClick={closeModal} />
         </Container>
       </Modal>
     );
